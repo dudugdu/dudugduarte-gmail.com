@@ -41,12 +41,24 @@ while funcionamento_jogo:
 
     soma_dados = random.randrange(1,7) + random.randrange(1,7)
 
+    print("A soma dos dados é: " + str(soma_dados))
 
     if tipo_aposta == "A" and soma_dados in [7, 11]:
         print("Parabéns!! Você dobrou o valor de sua aposta!!")
         carteira += 2 * aposta
     elif tipo_aposta == "A" and soma_dados in [2, 3, 12]:
-        print("Você perdeu tudo!!")
+        print("Você perdeu!!")
     elif tipo_aposta == "A" and soma_dados in [4, 5, 6, 8, 9, 10]:
         print("Continue o jogo")
-        continue
+        point = soma_dados
+        novo_dado = random.randrange(1,7) + random.randrange(1,7)
+        print("A soma dos novos dados é: " + str(novo_dado))
+        while novo_dado != point and novo_dado not in [7]:
+            print("Tente rodar novamente os dados")
+            novo_dado = random.randrange(1,7) + random.randrange(1,7)
+            print("A soma dos novos dados é: " + str(novo_dado))
+        if novo_dado == point:
+            print("Parabéns!! Você dobrou o valor de sua aposta!!")
+            carteira += 2 * aposta
+        else:
+            print("Você perdeu!!")
