@@ -73,3 +73,13 @@ while funcionamento_jogo:
     elif tipo_aposta == "B" and soma_dados in [12]:
         print("Parabéns!! Você quadruplicou o valor de sua aposta!!")
         carteira += 4 * aposta
+    elif tipo_aposta == "C" and soma_dados in [2, 3, 12]:
+        print("Parabéns!! Você ganhou 8 vezes o valor de sua aposta!!")
+        carteira += 8 * aposta
+    elif tipo_aposta == "C" and soma_dados in [4, 5, 6, 7, 8, 9, 10, 11]:
+        print("Você perdeu!!")
+    elif tipo_aposta == "D" and soma_dados in [12]:
+        print("Parabéns!! Você ganhou 31 vezes o valor de sua aposta!!")
+        carteira += 31 * aposta
+    elif tipo_aposta == "D" and soma_dados in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]:
+        print("Você perdeu!!")
