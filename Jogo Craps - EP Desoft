@@ -1,7 +1,7 @@
 import random
 
 print("Bem vindo ao Jogo Craps")
-print("Voce começa com 100 fichas")
+print("Voce começa com 1000 fichas")
 print("Dois dados de 6 lados são lançados para começarem as apostas")
 print("Você começa com o Come Out, que é uma aposta que caso voce tire na soma dos dados 7 ou 11 (Você ganha o mesmo valor que apostou), caso você tire 2, 3 ou 12 (Você perde tudo que apostou), ja se tirar 4, 5, 6, 7, 8, 9 ou 10 (O jogo muda para a fase Point).")
 print("No Point, se sair uma soma dos dados de valor 7 (Você perde tudo), caso a soma dos dados seja qualquer outra (Você se mantém na fase Point sem perder ou ganhar e continua jogando os dados sem perder ou ganhar), mantém isso ate sair o numero do point ou o numero 7 (Terminando essa rodada e começando uma nova Come Out).")
@@ -10,3 +10,13 @@ print("Field: Esta aposta pode ser feita em qualquer fase do jogo, se os dados d
 print("Any Craps: Esta aposta pode ser feita em qualquer fase do jogo, se os dados somarem 2, 3 ou 12 (Você ganha sete vezes o valor que apostou), senão perde a aposta.")
 print("Twelve: Esta aposta pode ser feita em qualquer fase do jogo, se a soma dos dados der 12 (Você ganha trinta vezes o valor que apostou), senão perde a aposta.")
 print()
+# pre definicoes
+
+carteira = 1000
+resultado = 0
+aposta = 0
+tipo_aposta = ""
+
+
+#inicio
+print("Quantidade de fichas: " + str(carteira))
