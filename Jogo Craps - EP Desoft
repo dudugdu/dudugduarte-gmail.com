@@ -83,3 +83,16 @@ while funcionamento_jogo:
         carteira += 31 * aposta
     elif tipo_aposta == "D" and soma_dados in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]:
         print("Você perdeu!!")
+
+    print("Quantidade de fichas restantes: " + str(carteira))
+    if carteira <= 0:
+        print("Você esta sem fichas para continuar!")
+        print("Até a próxima, jogador!")
+        funcionamento_jogo = False
+    else:
+        jogar_dnv = input("Você quer jogar novamente? (sim/nao)")
+        if jogar_dnv != "sim":
+            print("Muito obrigado por jogar!")
+            print("Até a próxima, jogador!")
+            funcionamento_jogo = False
+print("Você saiu do jogo com um total de: " + str(carteira) + " fichas!")
