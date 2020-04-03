@@ -31,3 +31,13 @@ while funcionamento_jogo:
             print("Você não tem fichas suficientes para cobrir esta aposta!")
         else:
             aposta_valida = True
+    while not aposta_valida:
+        tipo_aposta = input("Qual tipo de aposta você deseja?\nA: Normal\nB: Field\nC: Any Craps\nD: Twelve\n>")
+        if tipo_aposta not in ["A", "B", "C","D"]:
+            print("Você precisa escolher a aposta: A, B, C ou D")
+        else:
+            aposta_valida = True
+    carteira -= aposta
+
+    soma_dados = random.randrange(1,7) + random.randrange(1,7)
+
