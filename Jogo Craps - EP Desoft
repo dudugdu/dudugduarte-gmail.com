@@ -20,3 +20,14 @@ tipo_aposta = ""
 
 #inicio
 print("Quantidade de fichas: " + str(carteira))
+
+funcionamento_jogo = True
+
+while funcionamento_jogo:
+    aposta_valida = False
+    while not aposta_valida:
+        aposta = int(input("Quanto você gostaria de apostar?\n>"))
+        if aposta > carteira:
+            print("Você não tem fichas suficientes para cobrir esta aposta!")
+        else:
+            aposta_valida = True
